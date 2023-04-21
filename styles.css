@@ -17,6 +17,11 @@ body {
     width: 500px;
     height: 500px;
     border: medium solid black;
+    padding: 0px;
+}
+
+.pixel {
+    background-color: pink;
 }
 
 button {
