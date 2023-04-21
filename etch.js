@@ -1,15 +1,12 @@
-const container = document.querySelector(".canvas");
 let slider = document.getElementById("myRange");
-let output = document.getElementById("demo");
-let outputb = document.getElementById("size");
-outputb.innerHTML = slider.value;
-output.innerHTML = slider.value;
+let sliderValue = document.querySelector(".sliderValue");
 
 slider.oninput = function() {
-    output.innerHTML = this.value;
-    outputb.innerHTML = this.value;
+    sliderValue.innerHTML = `${slider.value} x ${slider.value}`;
 }
 
-function changeSize(size) {
+const defaultSize = 16;
+
+function changeDimensions(size) {
 
 }
