@@ -10,6 +10,15 @@ body {
     font-size: 46px;
 }
 
+.container {
+    display: flex;
+    gap: 20px;
+}
+
+.settings {
+    align-self: center;
+}
+
 .canvas {
     flex-grow: 0;
     flex-shrink: 0;
@@ -21,13 +30,14 @@ body {
 }
 
 .pixel {
-    background-color: pink;
+    background-color: white;
 }
 
 button {
     width: 100%;
     height: 25px;
-    margin-bottom: 3px;
+    margin-bottom: 10px;
+    border-radius: 9px;
 }
 
 p {
