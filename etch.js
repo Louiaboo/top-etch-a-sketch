@@ -7,7 +7,8 @@ slider.oninput = function() {
 }
 
 const canvas = document.querySelector(".canvas");
-const defaultSize = 16;
+let color = "black"; // default solid color
+let mode = "solid"; // default mode
 
 function changeDimensions(size) {
     canvas.style.gridTemplateColumns = `repeat(${size}, 1fr)`;
@@ -17,12 +18,18 @@ function changeDimensions(size) {
     }
     for (let i = 0; i < size * size; i++) {
         let pixel = document.createElement("div");
+        pixel.classList.add("pixel");
+        pixel.addEventListener("mouseover", changeColor);
         canvas.appendChild(pixel);
-        console.log(i);
     }
 }
 
+function changeColor() {
+    if (mode === "solid") {
+        this.style.backgroundColor = color;
+    }
+}
 
 window.onload = () => {
-    changeDimensions(defaultSize);
+    changeDimensions(16); // 16 is default size
 }
