@@ -28,7 +28,26 @@ function changeColor() {
     if (mode === "solid") {
         this.style.backgroundColor = color;
     }
+    else if (mode === "rainbow") {
+
+    }
+    else if (mode === "shade") {
+
+    }
+    else if (mode === "eraser") {
+        this.style.backgroundColor = "white";
+    }
 }
+
+const solid = document.querySelector(".solid");
+solid.addEventListener("click", () => {
+    mode = "solid";
+})
+
+const eraser = document.querySelector(".eraser");
+eraser.addEventListener("click", () => {
+    mode = "eraser";
+})
 
 window.onload = () => {
     changeDimensions(16); // 16 is default size
