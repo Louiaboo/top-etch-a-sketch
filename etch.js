@@ -29,8 +29,13 @@ function changeColor() {
         this.style.backgroundColor = color;
     }
     else if (mode === "rainbow") {
-        let randomColor = Math.floor(Math.random()*16777215).toString(16);
-        this.style.backgroundColor = `#${randomColor}`;
+        let x=Math.round(0xffffff * Math.random()).toString(16);
+        let y=(6-x.length);
+        let z="000000";
+        let z1 = z.substring(0,y);
+        let randomColor= "#" + z1 + x;
+        console.log(randomColor);
+        this.style.backgroundColor = randomColor;
     }
     else if (mode === "shade") {
 
