@@ -29,7 +29,10 @@ function changeColor() {
         this.style.backgroundColor = color;
     }
     else if (mode === "rainbow") {
-
+        let r = Math.random() * 256;
+        let g = Math.random() * 256;
+        let b = Math.random() * 256;
+        this.style.backgroundColor = `rgb(${r}, ${g}, ${b})`;
     }
     else if (mode === "shade") {
 
@@ -42,6 +45,11 @@ function changeColor() {
 const solid = document.querySelector(".solid");
 solid.addEventListener("click", () => {
     mode = "solid";
+})
+
+const rainbow = document.querySelector(".rainbow");
+rainbow.addEventListener("click", () => {
+    mode = "rainbow";
 })
 
 const eraser = document.querySelector(".eraser");
