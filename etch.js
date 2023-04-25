@@ -37,9 +37,6 @@ function changeColor() {
         console.log(randomColor);
         this.style.backgroundColor = randomColor;
     }
-    else if (mode === "shade") {
-
-    }
     else if (mode === "eraser") {
         this.style.backgroundColor = "white";
     }
@@ -58,6 +55,11 @@ rainbow.addEventListener("click", () => {
 const eraser = document.querySelector(".eraser");
 eraser.addEventListener("click", () => {
     mode = "eraser";
+})
+
+const clear = document.querySelector(".clear");
+clear.addEventListener("click", () => {
+    changeDimensions(slider.value);
 })
 
 window.onload = () => {
