@@ -29,10 +29,8 @@ function changeColor() {
         this.style.backgroundColor = color;
     }
     else if (mode === "rainbow") {
-        let r = Math.random() * 256;
-        let g = Math.random() * 256;
-        let b = Math.random() * 256;
-        this.style.backgroundColor = `rgb(${r}, ${g}, ${b})`;
+        let randomColor = Math.floor(Math.random()*16777215).toString(16);
+        this.style.backgroundColor = `#${randomColor}`;
     }
     else if (mode === "shade") {
 
